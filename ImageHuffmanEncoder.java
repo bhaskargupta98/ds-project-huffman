@@ -147,9 +147,9 @@ public class HuffmanEncoder {
             final HuffmanEncoder encoder = new HuffmanEncoder();
             final HuffmanEncodedResult result = encoder.compress(imageDataString);
             int a = result.encodedData.length();
-            int b = encoder.decompress(result).length()*64;
+            int b = encoder.decompress(result).length()*8;
             System.out.println("Encoded message: " + result.encodedData.length()+ " bits");
-            System.out.println("Decoded message: " + encoder.decompress(result).length()*64+ " bits");
+            System.out.println("Decoded message: " + encoder.decompress(result).length()*8+ " bits");
             System.out.println("Percentage compression: "+ (100.00-(float)a/b*100));
         } catch (FileNotFoundException e) {
             System.out.println("Image not found" + e);
